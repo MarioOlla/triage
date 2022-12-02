@@ -44,7 +44,7 @@ public class DottoreController {
 				.block();
 	}
 
-	@PostMapping
+	@PostMapping("/aggiungiDottore")
 	@ResponseStatus(HttpStatus.CREATED)
 	public DottoreResponseDTO censisciDottore(@Valid @RequestBody DottoreRequestDTO input) {
 		DottoreResponseDTO result = webClient.post()
@@ -57,7 +57,7 @@ public class DottoreController {
 		return result;
 	}
 	
-	@PutMapping
+	@PutMapping("/aggiornaAnagrafica")
 	@ResponseStatus(HttpStatus.OK)
 	public DottoreRequestDTO aggiornaAnagraficaDottore(@Valid @RequestBody DottoreRequestDTO input) {
 		DottoreRequestDTO result = webClient.put()
@@ -70,7 +70,7 @@ public class DottoreController {
 		return result;
 	}
 	
-	@PutMapping
+	@PutMapping("aggiornaStato")
 	@ResponseStatus(HttpStatus.OK)
 	public DottoreResponseDTO aggiornaStatoDottore(@RequestBody DottoreResponseDTO input) {
 		DottoreResponseDTO result = webClient.put()
