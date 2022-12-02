@@ -2,6 +2,9 @@ package it.prova.triage.dto;
 
 import javax.validation.constraints.NotBlank;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DottoreRequestDTO {
 	@NotBlank(message = "{nome.notblank}")
 	private String nome;

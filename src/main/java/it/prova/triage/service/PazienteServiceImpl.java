@@ -47,6 +47,21 @@ public class PazienteServiceImpl implements PazienteService {
 		//controllare se esiste un paziente con quell'id
 		repository.deleteById(id);
 	}
+	@Override
+	public Paziente iniziaVisita(Long id,String codiceDottore) {
+		// verifiche prima dell'aggiornamento
+		return null;
+	}
+	@Override
+	public Paziente ricovera(Long id) {
+		// verifiche prima dell'aggiornamento
+		return null;
+	}
+	@Override
+	public Paziente dimetti(Long id) {
+		// verifiche prima dell'aggiornamento
+		return null;
+	}
 	
 	
 }

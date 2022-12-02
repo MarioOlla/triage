@@ -17,5 +17,11 @@ public interface PazienteService {
 	Paziente aggiorna(Paziente input);
 
 	void rimuovi(Long id);
+	
+	Paziente iniziaVisita(Long id,String CodiceDottore);
+	
+	Paziente ricovera(Long id);
+	
+	Paziente dimetti(Long id);
 
 }

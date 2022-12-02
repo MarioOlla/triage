@@ -72,9 +72,9 @@ public class DottoreController {
 	
 	@PutMapping
 	@ResponseStatus(HttpStatus.OK)
-	public DottoreResponseDTO aggiornaStatoDottore(@Valid @RequestBody DottoreResponseDTO input) {
+	public DottoreResponseDTO aggiornaStatoDottore(@RequestBody DottoreResponseDTO input) {
 		DottoreResponseDTO result = webClient.put()
-				.uri("/aggiornaAnagrafica")
+				.uri("/aggiornaStato")
 				.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
 				.body(Mono.just(input), DottoreResponseDTO.class)
 				.retrieve()
